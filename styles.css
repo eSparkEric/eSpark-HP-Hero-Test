@@ -1,0 +1,285 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Updated font-family */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Set background to white */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 0;
+    background-color: #ffffff; /* Ensure header has a white background */
+    box-shadow: 0 3px 8px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the header */
+}
+
+header .logo img {
+    height: 100px;
+    padding-left: 1em; /* Add padding to the left of the logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.25em 0.5em; /* Reduce padding as needed */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+nav ul li a.login {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 0.25em 0.5em; /* Reduce padding as needed */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+nav ul li a.sign-up {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 0.25em 0.5em; /* Reduce padding as needed */
+    font-size: 1em; /* Adjust font size as needed */
+    margin-right: 1em; /* Add padding to the right of the rightmost button */
+}
+
+
+#hero-module {
+    padding: 0em 0;
+    text-align: center;
+    background-color: #ffffff;
+    max-width: 1000px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the hero module */
+}
+
+#hero-module h1 {
+    font-size: 4em; /* Increased font-size */
+    font-weight: 800; /* Bold weight */
+    margin-bottom: 0em;
+}
+
+#hero-module h1 .differently {
+    color: #007bff;
+}
+
+#hero-module h1 .espark {
+    color: #007bff;
+}
+
+#hero-module p {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+
+.sign-up-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.25em 1.5em;
+    border: none;
+    border-radius: 6%;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-bottom: 2em; /* Add this line to create space below the button */
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    line-height: 1.5;
+    border-radius: 6%;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-lg {
+    padding: 0.5em 2em;
+    font-size: 1.25em;
+    border-radius: 60px;
+    font-weight: bold; /* Add this line to make the text bold */
+}
+
+.btn-es-blue {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-es-blue:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.px-3 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.student-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    max-width: 960px; /* Adjust width for 6 students */
+    margin: 2em auto;
+    margin-top: 2em; /* Add this line to create space above the grid */
+}
+
+.student {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.student img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Basic pop-up appearance and stacking order */
+.popup {
+    position: absolute; /* Allows for specific positioning within a container */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000; /* Ensures the pop-up appears above other elements */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Specific styles for the student pop-up, centered on the screen */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px; /* Minimal padding */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.popup-header {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 10px; /* Minimal space below header */
+    position: relative; /* Ensure proper alignment */
+}
+
+.popup-headshot {
+    width: 200px; /* Adjust size */
+    height: 200px; /* Adjust size */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px; /* Minimal space to the right of the image */
+}
+
+.popup-details {
+    flex-grow: 1;
+}
+
+.popup-details h3 {
+    margin: 0; /* Remove default margin */
+}
+
+.popup-details ul {
+    margin-top: 5px; /* Minimal space above list */
+    padding-left: 20px; /* Standard padding for unordered list */
+    list-style: disc;
+}
+
+.popup-activity {
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin: 10px; /* Minimal padding around the image */
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px; /* Adjust padding as needed */
+    right: 10px; /* Adjust padding as needed */
+    background: transparent;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it is above other elements */
+}
+
+
+
+
+/* Styles for the new CTA section */
+.cta-section {
+    background-color: #4790d7; /* Blue background color */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    padding: 2em 1em; /* Add padding for spacing */
+    font-size: 1.5em; /* Increase font size */
+    border-radius: 10px; /* Round corners */
+    margin-top: 2em; /* Add space above the section */
+}
+
+.cta-section p {
+    margin: 0 auto 1em auto; /* Center text with margin */
+    max-width: 800px; /* Limit text width for readability */
+}
+
+.cta-sign-up-btn {
+    background-color: white; /* White background for the button */
+    color: #007bff; /* Blue text color */
+    padding: 0.5em 1em; /* Add padding */
+    border: none;
+    border-radius: 60px; /* Round corners */
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+}
+
+.cta-sign-up-btn:hover {
+    background-color: #0056b3; /* Darken background on hover */
+    color: white; /* White text color on hover */
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
