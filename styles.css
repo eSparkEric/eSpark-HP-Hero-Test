@@ -227,6 +227,7 @@ nav ul li a.sign-up {
 .popup-activity {
     width: calc(100% - 20px); /* Full width minus padding */
     margin: 10px; /* Minimal padding around the image */
+    border: 1px solid #000000
 }
 
 .popup-close {
