@@ -159,6 +159,7 @@ nav ul li a.sign-up {
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+    border: 1px solid #ccc; /* Add this line for the border */
 }
 
 /* Basic pop-up appearance and stacking order */
@@ -206,6 +207,7 @@ nav ul li a.sign-up {
     object-fit: cover;
     border-radius: 10px;
     margin-right: 10px; /* Minimal space to the right of the image */
+    border: 1px solid #ccc; /* Add this line for the border */
 }
 
 .popup-details {
